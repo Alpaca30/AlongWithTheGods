@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6237392350524251666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8047153527007278654, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777719, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_Name
+      value: Portal_Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362349209469777723, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6620804605882948657, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+    - {fileID: 8047153527007278654, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+--- !u!1 &2486729196190722341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8362349209469777719, guid: b9b81ec764e2c7c4d8bb114761caface, type: 3}
+  m_PrefabInstance: {fileID: 6237392350524251666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8104463712865916336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2486729196190722341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c8e7717cd3e4543818c011a38a42de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
