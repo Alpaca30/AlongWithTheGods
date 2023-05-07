@@ -43,7 +43,7 @@ public class TestWeapon : MonoBehaviour
             swordMat.SetColor("_MaskColor", new Color(1f, 1f, 1f, 1f));
             swordMat.SetColor("_SubMaskColor", new Color(0.2735849f, 0.2735849f, 0.2735849f, 1f));
         }
-        else if (_combo < 50)
+        else if (_combo < 60)
         {
             swordMat.SetColor("_MaskColor", new Color(8f, 6.305882f, 2.603922f, 1f));
             swordMat.SetColor("_SubMaskColor", new Color(0.8559341f, 0.5884547f, 0.4160791f, 1f));
