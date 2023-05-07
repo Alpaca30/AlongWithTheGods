@@ -111,7 +111,7 @@ public class UIComboManager : MonoBehaviour
     */
     private void ComboFontColor(int _combo)
     {
-        if (_combo >= 0 && _combo < 60)
+        if (_combo >= 0 && _combo < 30)
         {
             //Color topColor = new Color(140f, 140f, 140f, 1f);       // #8C8C8CFF
             //Color bottomColor = new Color(255f, 255f, 255f, 1f);    // #FFFFFFFF
@@ -119,7 +119,7 @@ public class UIComboManager : MonoBehaviour
             Color bottomColor = new Color(1f, 1f, 1f, 1f);                      // #FFFFFFFF
             combo.colorGradient = GetGradient(topColor, bottomColor);
         }
-        else if (_combo >= 60 && _combo < 100)
+        else if (_combo >= 30 && _combo < 60)
         {
             //Color topColor = new Color(255f, 123f, 0f, 1f);         // #FF7B00FF
             //Color bottomColor = new Color(255f, 248f, 146f, 1f);    // #FFF892FF
@@ -127,7 +127,7 @@ public class UIComboManager : MonoBehaviour
             Color bottomColor = new Color(1f, 0.972549f, 0.572549f, 1f);        // #FFF892FF
             combo.colorGradient = GetGradient(topColor, bottomColor);
         }
-        else if (_combo >= 100 && _combo < 150)
+        else if (_combo >= 60 && _combo < 100)
         {
             //Color topColor = new Color(255f, 0f, 82f, 1f);          // #FF0052FF
             //Color bottomColor = new Color(255f, 157f, 47f, 1f);    // #FF9D2FFF
@@ -135,7 +135,7 @@ public class UIComboManager : MonoBehaviour
             Color bottomColor = new Color(1f, 0.6156863f, 0.1843137f, 1f);      // #FF9D2FFF
             combo.colorGradient = GetGradient(topColor, bottomColor);
         }
-        else if (_combo >= 150)
+        else if (_combo >= 100)
         {
             //Color topColor = new Color(255f, 6f, 171f, 1f);         // #FF06ABFF
             //Color bottomColor = new Color(100f, 171f, 255f, 1f);    // #64ABFFFF
