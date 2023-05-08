@@ -13,10 +13,6 @@ public class PlayerEffect : MonoBehaviour
     private MeshRenderer swordMr = null;
 
     private Material toonMat = null;
-    private Material outlineMat = null;
-
-    private string toonName = "ToonShader";
-    private string outlineName = "OutlineSG";
 
 
     private void Awake()
@@ -25,21 +21,7 @@ public class PlayerEffect : MonoBehaviour
         {
             playerMr = GetComponent<SkinnedMeshRenderer>();
         }
-
-        List<Material> matList = new List<Material>();
-        playerMr.GetMaterials(matList);
-
-        for (int i = 0; i < matList.Count; ++i)
-        {
-            string shaderName = matList[i].shader.name;
-            string[] splits = shaderName.Split("/");
-            string name = splits[splits.Length - 1];
-
-            if (name == toonName)
-                toonMat = matList[i];
-            else if (name == outlineName)
-                outlineMat = matList[i];
-        }
+        toonMat = playerMr.material;
 
         if (fireParticle != null)
         {
@@ -56,7 +38,7 @@ public class PlayerEffect : MonoBehaviour
         playerMr.receiveShadows = false;
 
         toonMat.SetFloat("_Edges", 0.15f);
-        outlineMat.SetFloat("_Outline", 0f);
+        toonMat.SetFloat("_Outline", 0f);
         DieEffect(toonMat, 0.7f);
     }
 
