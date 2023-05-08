@@ -10,6 +10,9 @@ public class ComboController : MonoBehaviour
 
     public delegate void WeaponEffectDelegate(int _count);
     private WeaponEffectDelegate weaponEffectCallback = null;
+    
+    public delegate void SkillActiveDelegate(bool _active);
+    private SkillActiveDelegate skillActiveCallback = null;
 
     //[SerializeField] private TextMeshProUGUI comboText = null;
     public TestWeapon tw = null;
@@ -67,6 +70,11 @@ public class ComboController : MonoBehaviour
 
         comboCountCallback?.Invoke(comboCount);
         weaponEffectCallback?.Invoke(comboCount);
+        if (comboCount < skillACount)
+            skillActiveCallback?.Invoke(false);
+        else
+            skillActiveCallback?.Invoke(true);
+
 
         // 현재 공격 시간을 마지막 공격 시간으로 저장
         lastAttackTime = currentTime;
@@ -88,6 +96,10 @@ public class ComboController : MonoBehaviour
 
         comboCountCallback?.Invoke(comboCount);
         weaponEffectCallback?.Invoke(comboCount);
+        if (comboCount < skillACount)
+            skillActiveCallback?.Invoke(false);
+        else
+            skillActiveCallback?.Invoke(true);
 
         lastAttackTime = currentTime;
         StartCoroutine(ResetComboAfterDelay());
@@ -106,6 +118,10 @@ public class ComboController : MonoBehaviour
 
         comboCountCallback?.Invoke(comboCount);
         weaponEffectCallback?.Invoke(comboCount);
+        if (comboCount < skillACount)
+            skillActiveCallback?.Invoke(false);
+        else
+            skillActiveCallback?.Invoke(true);
 
         lastAttackTime = currentTime;
         StartCoroutine(ResetComboAfterDelay());
@@ -122,6 +138,10 @@ public class ComboController : MonoBehaviour
             comboCount = 0;
             comboCountCallback?.Invoke(comboCount);
             weaponEffectCallback?.Invoke(comboCount);
+            if (comboCount < skillACount)
+                skillActiveCallback?.Invoke(false);
+            else
+                skillActiveCallback?.Invoke(true);
         }
     }
 
@@ -135,6 +155,10 @@ public class ComboController : MonoBehaviour
             ta.SetSkillBAnimation();
             comboCountCallback?.Invoke(comboCount);
             weaponEffectCallback?.Invoke(comboCount);
+            if (comboCount < skillACount)
+                skillActiveCallback?.Invoke(false);
+            else
+                skillActiveCallback?.Invoke(true);
         }
         else if (comboCount >= skillACount)
         {
@@ -143,6 +167,10 @@ public class ComboController : MonoBehaviour
             ta.SetSkillAAnimation();
             comboCountCallback?.Invoke(comboCount);
             weaponEffectCallback?.Invoke(comboCount);
+            if (comboCount < skillACount)
+                skillActiveCallback?.Invoke(false);
+            else
+                skillActiveCallback?.Invoke(true);
         }
     }
 
@@ -154,6 +182,11 @@ public class ComboController : MonoBehaviour
     public void GetComboCountDelegate(ComboCountDelegate _comboCountCallback)
     {
         comboCountCallback = _comboCountCallback;
+    }
+    
+    public void GetSkillActiveDelegate(SkillActiveDelegate _skillActiveCallback)
+    {
+        skillActiveCallback = _skillActiveCallback;
     }
 
     public void ChangeWeaponEffectDelegate(WeaponEffectDelegate _weaponEffectCallback)

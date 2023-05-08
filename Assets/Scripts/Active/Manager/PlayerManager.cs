@@ -14,8 +14,8 @@ public class PlayerManager : MonoBehaviour
     public delegate void PlayerMaxHpDelegate(int _maxHp);
     private PlayerMaxHpDelegate playerMaxHpCallback = null;
 
-    public delegate void SkillActiveDelegate(bool _bool);
-    private SkillActiveDelegate skillActiveCallback = null;
+    //public delegate void SkillActiveDelegate(bool _bool);
+    //private SkillActiveDelegate skillActiveCallback = null;
 
     public delegate void DashActiveDelegate(bool _bool);
     private DashActiveDelegate dashActiveCallback = null;
@@ -23,19 +23,19 @@ public class PlayerManager : MonoBehaviour
     public PlayerSpawnManager playerSpawnManager = null;
     public PlayerMovement pm = null;
 
-    private TestAttack ta = null;
+    //private TestAttack ta = null;
     private Dashing dash = null;
 
     public void Init()
     {
-        ta = pm.GetComponentInChildren<TestAttack>();
+        //ta = pm.GetComponentInChildren<TestAttack>();
         dash = pm.GetComponent<Dashing>();
 
         playerSpawnManager.player.GetComponent<PlayerState>().
             SetPlayerStateDelegate(SetPlayerIsDead, SetDashCheck, SetHitFalse, SetLaserCheck, SetHitDelegate);
         playerSpawnManager.player.GetComponent<PlayerState>().GetPlayerMaxHpDelegate(GetMaxHpDelegate);
         playerSpawnManager.SetPlayerSpawnManagerDelegate(SetDamagePlayerHp);
-        ta.GetSkillActiveDelegate(GetSkillActive);
+        //ta.GetSkillActiveDelegate(GetSkillActive);
         dash.GetDashActiveDelegate(GetDashActive);
         playerSpawnManager.player.GetComponent<PlayerState>().Init();
     }
@@ -97,15 +97,15 @@ public class PlayerManager : MonoBehaviour
         playerMaxHpCallback = _playerMaxHpCallback;
     }
 
-    private void GetSkillActive(bool _bool)
-    {
-        skillActiveCallback?.Invoke(_bool);
-    }
+    //private void GetSkillActive(bool _bool)
+    //{
+    //    skillActiveCallback?.Invoke(_bool);
+    //}
 
-    public void GetSkillActiveDelegate(SkillActiveDelegate _skillActiveCallback)
-    {
-        skillActiveCallback = _skillActiveCallback;
-    }
+    //public void GetSkillActiveDelegate(SkillActiveDelegate _skillActiveCallback)
+    //{
+    //    skillActiveCallback = _skillActiveCallback;
+    //}
 
     private void GetDashActive(bool _bool)
     {

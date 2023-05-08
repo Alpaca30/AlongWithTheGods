@@ -13,7 +13,7 @@ public class UIComboManager : MonoBehaviour
     private TMP_InputField input = null;
     private TextMeshProUGUI combo = null; // 콤보 숫자 출력 텍스트
 
-    private int singularity = 30;
+    private int singularity = 100;
 
     // for Test
     private int testCombo = 0;

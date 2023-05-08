@@ -78,8 +78,9 @@ public class GameControlManager : MonoBehaviour
             bossManager.SetActiveBossHpBarDelegate(SetActiveBossHpBar); // 보스 HpBar 활성/비활성 델리게이트
         }
         comboController.GetComboCountDelegate(GetComboCount); // 현재 콤보수치 위로 올려주는 델리게이트
+        comboController.GetSkillActiveDelegate(GetSkillActive); // 스킬 활성/비활성 델리게이트
         playerManager.GetPlayerMaxHpDelegate(GetMaxHpDelegate);
-        playerManager.GetSkillActiveDelegate(GetSkillActive);
+        //playerManager.GetSkillActiveDelegate(GetSkillActive);
         playerManager.GetDashActiveDelegate(GetDashActive);
 
         playerManager.Init();

@@ -68,7 +68,10 @@ public class UICooltimeHolder : MonoBehaviour
     public void Init(OnSkillCallback _skillCallback)
     {
         SetSkillEvent(_skillCallback, skillType);
-        Active();
+        if (skillType == ESkillType.Dash)
+            Active();
+        else
+            Inactive();
     }
 
 

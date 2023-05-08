@@ -8,8 +8,8 @@ public class TestAttack : MonoBehaviour
     public delegate void SkillDelegate();
     private SkillDelegate skillCallback = null;
 
-    public delegate void SkillActiveDelegate(bool _bool);
-    private SkillActiveDelegate skillActiveCallback = null;
+    //public delegate void SkillActiveDelegate(bool _bool);
+    //private SkillActiveDelegate skillActiveCallback = null;
 
     [SerializeField] private BoxCollider weaponCollider;
     [SerializeField] private BoxCollider skillWaveCollider;
@@ -42,13 +42,13 @@ public class TestAttack : MonoBehaviour
     {
         anim.SetTrigger("isSkillA");
         pm.skill = true;
-        skillActiveCallback?.Invoke(!pm.skill);
+        //skillActiveCallback?.Invoke(!pm.skill);
     }
     public void SetSkillBAnimation()
     {
         anim.SetTrigger("isSkillB");
         pm.skill = true;
-        skillActiveCallback?.Invoke(!pm.skill);
+        //skillActiveCallback?.Invoke(!pm.skill);
     }
 
     public void OnCollider1() // 1타
@@ -138,7 +138,7 @@ public class TestAttack : MonoBehaviour
     public void OffSkillAction()
     {
         pm.skill = false;
-        skillActiveCallback?.Invoke(!pm.skill);
+        //skillActiveCallback?.Invoke(!pm.skill);
     }
 
     public void FinishedStartJump()
@@ -151,8 +151,8 @@ public class TestAttack : MonoBehaviour
         skillCallback = _skillCallback;
     }
 
-    public void GetSkillActiveDelegate(SkillActiveDelegate _skillActiveCallback)
-    {
-        skillActiveCallback = _skillActiveCallback;
-    }
+    //public void GetSkillActiveDelegate(SkillActiveDelegate _skillActiveCallback)
+    //{
+    //    skillActiveCallback = _skillActiveCallback;
+    //}
 }
